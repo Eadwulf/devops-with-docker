@@ -13,3 +13,8 @@ $ docker build . -t youtube-dl
 ```console
 $ docker run youtube-dl https://imgur.com/JY5tHqr
 ```
+
+Alternatively, define a host volume to be able to access the downloaded file
+```console
+$ docker run -v "$(pwd):/mydir" youtube-dl https://imgur.com/JY5tHqr
+```
